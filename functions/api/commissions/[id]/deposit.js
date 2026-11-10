@@ -1,4 +1,4 @@
-import { json, setDeposit } from "../../_shared/db.mjs";
+import { json, setDeposit } from "../../../_shared/db.mjs";
 
 export async function onRequest(context) {
   const { request, params, env } = context;

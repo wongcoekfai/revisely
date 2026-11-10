@@ -1,4 +1,4 @@
-import { json, setDelivered } from "../../_shared/db.mjs";
+import { json, setDelivered } from "../../../_shared/db.mjs";
 
 export async function onRequest(context) {
   const { params, env } = context;

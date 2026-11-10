@@ -1,4 +1,4 @@
-import { json, addVersion, abToBase64 } from "../../_shared/db.mjs";
+import { json, addVersion, abToBase64 } from "../../../_shared/db.mjs";
 
 export async function onRequest(context) {
   const { request, params, env } = context;
