@@ -35,19 +35,20 @@ with the Cloudflare token kept as a GitHub Secret. No manual deploy command need
 
 ### One-time setup (your machine — where you're logged into GitHub)
 
-**a) Push the repo to GitHub**
-```bash
-# if gh isn't installed yet:
-brew install gh && gh auth login        # browser is already logged in — just authorize
+**a) Create the repo on GitHub, then push with plain git**
+Your other projects already use the macOS keychain credential helper for
+passwordless pushes, so **no `gh` CLI is needed** — this matches the SlideVault
+setup exactly.
 
+1. In your browser (already logged into GitHub): create a **new private repo**
+   named `revisely` (leave it empty — no README / .gitignore).
+2. Point the local repo at it and push:
+```bash
 cd /Users/huangzhuohui/WorkBuddy/2026-11-09-10-17-54/revisely
-gh repo create revisely --private --source=. --remote=origin --push
-# or, if the repo already exists:
-#   git remote add origin <your-repo-url>
-#   git push -u origin main
+git remote add origin https://github.com/<your-username>/revisely.git
+git push -u origin main
 ```
-> Tip: enable the macOS keychain credential helper for passwordless pushes:
-> `git config --global credential.helper osxkeychain`
+If the repo already exists, just use its URL in the `git remote add` line.
 
 **b) Add two GitHub Secrets** (repo → Settings → Secrets and variables → Actions):
 - `CLOUDFLARE_API_TOKEN` — a Cloudflare API token with **Pages:Edit** and **D1:Edit**
