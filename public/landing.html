@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Revisely — Revision proofing for commission artists</title>
+<link rel="stylesheet" href="/css/style.css" />
+<style>
+  .nav { display:flex; align-items:center; justify-content:space-between; padding: 22px 0; }
+  .logo { font-weight:800; font-size:20px; letter-spacing:.5px; }
+  .logo span { color: var(--brand-2); }
+  .hero { padding: 60px 0 40px; }
+  .hero h1 { font-size: 44px; line-height:1.15; margin:0 0 18px; font-weight:800; }
+  .hero h1 .hl { background: linear-gradient(135deg,var(--brand),var(--accent)); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .hero p.sub { font-size:18px; color:var(--muted); max-width: 640px; margin: 0 0 28px; }
+  .pill { display:inline-block; background:var(--panel-2); border:1px solid var(--border); color:var(--brand-2); padding:6px 14px; border-radius:999px; font-size:13px; margin-bottom:22px; }
+  .pain { display:grid; grid-template-columns: repeat(3,1fr); gap:16px; margin: 40px 0; }
+  .pain .card h3 { margin:0 0 8px; font-size:16px; }
+  .pain .card p { margin:0; color:var(--muted); font-size:14px; }
+  .flow { display:grid; grid-template-columns: repeat(5,1fr); gap:12px; margin: 36px 0; }
+  .step { background:var(--panel); border:1px solid var(--border); border-radius:12px; padding:16px; position:relative; }
+  .step .n { width:28px;height:28px;border-radius:8px; background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#fff; display:flex;align-items:center;justify-content:center; font-weight:700; margin-bottom:10px; }
+  .step h4 { margin:0 0 6px; font-size:14px; }
+  .step p { margin:0; color:var(--muted); font-size:12.5px; }
+  .cta-band { margin: 50px 0; padding: 40px; border-radius:18px; background: linear-gradient(135deg,#1c1733,#131826); border:1px solid var(--border); text-align:center; }
+  .cta-band h2 { margin:0 0 10px; font-size:28px; }
+  .footer { padding: 30px 0 50px; color:var(--muted); font-size:13px; border-top:1px solid var(--border); margin-top:30px; }
+  @media(max-width: 820px){ .pain,.flow{grid-template-columns:1fr;} .hero h1{font-size:32px;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="nav">
+    <div class="logo">Revis<span>ely</span></div>
+    <a class="btn small" href="/app.html">Open Studio →</a>
+  </nav>
+
+  <section class="hero">
+    <div class="pill">Built for independent commission artists · stop the revision nightmare</div>
+    <h1>Never lose track of <span class="hl">which revision you're on</span> again.</h1>
+    <p class="sub">Revisely lets you upload artwork, get client sign-off, and keep every version on record — all through one shareable link. No more scrolling through Instagram DMs and email threads trying to figure out which version you're actually working on.</p>
+    <div class="row">
+      <a class="btn" href="/app.html">Start a commission — free</a>
+      <a class="btn ghost" href="#how">See how it works</a>
+    </div>
+  </section>
+
+  <div class="pain">
+    <div class="card">
+      <h3>😵 Version chaos</h3>
+      <p>"I literally cannot reconstruct from a month of chat logs which version we're on."</p>
+    </div>
+    <div class="card">
+      <h3>🤬 Scope creep fights</h3>
+      <p>A client "just adds a cat" — is that a revision or a whole new request? You end up working for free.</p>
+    </div>
+    <div class="card">
+      <h3>📭 No paper trail</h3>
+      <p>Verbal approval =随时反悔. Deposit, delivery and sign-off live only in memory — zero proof in a dispute.</p>
+    </div>
+  </div>
+
+  <h2 id="how" style="margin-top:50px; font-size:26px;">A five-step workflow, fully tracked</h2>
+  <div class="flow">
+    <div class="step"><div class="n">1</div><h4>Create brief</h4><p>Note the client's brief, deposit amount, and generate a private client link.</p></div>
+    <div class="step"><div class="n">2</div><h4>Upload version</h4><p>Drop in a sketch or final, tagged as initial / revision / new request.</p></div>
+    <div class="step"><div class="n">3</div><h4>Client approval</h4><p>Send the link; they view, annotate and approve (or request changes) in one click.</p></div>
+    <div class="step"><div class="n">4</div><h4>Version history</h4><p>Every upload and approval is saved automatically — who changed what, when.</p></div>
+    <div class="step"><div class="n">5</div><h4>Deliver &amp; get paid</h4><p>Mark delivered and record the deposit once the final is approved.</p></div>
+  </div>
+
+  <div class="cta-band">
+    <h2>Don't let revisions eat your profit</h2>
+    <p class="muted" style="margin:0 0 22px;">$12/mo, first 3 commissions free forever. Set up your first commission in 30 seconds.</p>
+    <a class="btn" href="/app.html">Open the Studio and try it now →</a>
+  </div>
+
+  <div class="footer">
+    Revisely · Revision proofing &amp; version tracking for commission artists · This is an MVP prototype; data is stored in a Cloudflare edge database.
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Confirm your artwork · Revisely</title>
+<link rel="stylesheet" href="/css/style.css" />
+<style>
+  .topbar { text-align:center; padding: 26px 0 6px; }
+  .logo { font-weight:800; font-size:20px; }
+  .logo span { color: var(--brand-2); }
+  .client-wrap { max-width: 680px; margin: 0 auto; padding: 10px 20px 60px; }
+  .panel { background:var(--panel); border:1px solid var(--border); border-radius:var(--radius); padding:22px; margin-bottom:18px; }
+  .hero-art { text-align:center; }
+  .hero-art img { max-width:100%; max-height:460px; border-radius:12px; border:1px solid var(--border); background:#000; }
+  .hero-art .note { color:var(--muted); margin-top:12px; white-space:pre-wrap; }
+  .actions { display:flex; gap:12px; margin-top:18px; }
+  .actions .btn { flex:1; justify-content:center; }
+  .hist { display:flex; gap:10px; overflow-x:auto; padding-bottom:6px; }
+  .hist img { width:84px;height:84px; object-fit:cover; border-radius:8px; border:1px solid var(--border); }
+  .hist .hv { text-align:center; font-size:11px; color:var(--muted); }
+  .big-msg { text-align:center; padding: 40px 0; }
+  .big-msg .em { font-size:40px; margin-bottom:10px; }
+  textarea { margin-top:8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar"><div class="logo">Revis<span>ely</span></div></div>
+  <div class="client-wrap" id="root">
+    <div class="big-msg"><div class="em">⏳</div>Loading…</div>
+  </div>
+</div>
+<script src="/js/client.js"></script>
+</body>
+</html>

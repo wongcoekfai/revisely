@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Revisely — Artist Studio</title>
+<link rel="stylesheet" href="/css/style.css" />
+<style>
+  .topbar { display:flex; align-items:center; justify-content:space-between; padding: 18px 0; border-bottom:1px solid var(--border); }
+  .logo { font-weight:800; font-size:19px; }
+  .logo span { color: var(--brand-2); }
+  .layout { display:grid; grid-template-columns: 360px 1fr; gap: 22px; padding: 24px 0; }
+  @media(max-width: 860px){ .layout{ grid-template-columns:1fr; } }
+  .list-item { cursor:pointer; transition: border-color .12s; }
+  .list-item:hover { border-color: var(--brand); }
+  .list-item.active { border-color: var(--brand); background:#1e2030; }
+  .list-item .t { font-weight:600; margin-bottom:4px; }
+  .list-item .m { font-size:13px; color:var(--muted); }
+  .detail-empty { display:flex; align-items:center; justify-content:center; height:400px; color:var(--muted); border:1px dashed var(--border); border-radius:var(--radius); }
+  .ver { display:flex; gap:14px; align-items:flex-start; border:1px solid var(--border); border-radius:12px; padding:14px; margin-bottom:12px; background:var(--bg-soft); }
+  .ver img { width:120px; height:120px; object-fit:cover; border-radius:10px; border:1px solid var(--border); background:#000; }
+  .ver .meta { flex:1; }
+  .ver .verhead { display:flex; align-items:center; gap:8px; margin-bottom:6px; }
+  .ver .note { color:var(--muted); font-size:13.5px; white-space:pre-wrap; }
+  .ver .cc { margin-top:8px; font-size:13px; color:var(--amber); }
+  .typetag { font-size:11px; padding:2px 8px; border-radius:6px; background:#2a2350; color:var(--brand-2); }
+  .typetag.revision { background:#1f2e44; color:#8fc0ff; }
+  .typetag.newrequest { background:#3a2412; color:var(--amber); }
+  .uploadbox { margin-top:14px; border:1px dashed var(--border); border-radius:12px; padding:16px; }
+  .ghost-link { font-size:13px; color:var(--muted); margin-top:10px; }
+  .ghost-link code { background:var(--bg-soft); padding:4px 8px; border-radius:6px; border:1px solid var(--border); display:inline-block; word-break:break-all; }
+  .stat { display:flex; gap:18px; margin: 6px 0 16px; flex-wrap:wrap; }
+  .stat .s { background:var(--panel); border:1px solid var(--border); border-radius:10px; padding:10px 14px; }
+  .stat .s b { font-size:18px; display:block; }
+  .stat .s span { font-size:12px; color:var(--muted); }
+  h3.section { font-size:15px; margin: 4px 0 12px; color:var(--muted); text-transform:uppercase; letter-spacing:.5px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <div class="logo">Revis<span>ely</span> · Artist Studio</div>
+    <a class="btn ghost small" href="/">← Home</a>
+  </div>
+
+  <div class="layout">
+    <div>
+      <div class="card" style="margin-bottom:18px;">
+        <h3 class="section">+ New commission</h3>
+        <label>Client name *</label>
+        <input id="c_clientName" placeholder="e.g. Alice" />
+        <label>Artwork title *</label>
+        <input id="c_title" placeholder="e.g. Pet portrait illustration" />
+        <label>Client brief</label>
+        <textarea id="c_brief" rows="3" placeholder="Size, style, references, delivery format…"></textarea>
+        <label>Deposit amount ($)</label>
+        <input id="c_deposit" type="number" placeholder="50" value="50" />
+        <label>Your name / studio (optional)</label>
+        <input id="c_artist" placeholder="Studio name" />
+        <button class="btn small" id="btnCreate" style="margin-top:14px; width:100%;">Create commission</button>
+      </div>
+
+      <h3 class="section">My commissions</h3>
+      <div id="list"></div>
+    </div>
+
+    <div>
+      <div id="detail">
+        <div class="detail-empty">← Pick a commission on the left, or create one</div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="/js/app.js"></script>
+</body>
+</html>

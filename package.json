@@ -1,0 +1,15 @@
+{
+  "name": "revisely",
+  "version": "0.2.0",
+  "description": "Revision proofing + version tracking for commission artists. Cloudflare Pages + D1.",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler pages deploy public",
+    "db:local": "wrangler d1 execute revisely --local --file=./schema.sql",
+    "db:remote": "wrangler d1 execute revisely --remote --file=./schema.sql"
+  },
+  "devDependencies": {
+    "wrangler": "^3.90.0"
+  }
+}
